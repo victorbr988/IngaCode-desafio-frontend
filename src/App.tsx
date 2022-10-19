@@ -4,7 +4,7 @@ import { Pagination } from './routes/Pagination'
 
 function App() {
   return (
-    <div className='min-h-full'>
+    <div className='min-h-screen'>
       <Pagination />
     </div>
   )
