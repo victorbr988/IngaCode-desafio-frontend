@@ -1,16 +1,16 @@
-import { Menu } from "@headlessui/react";
 import clsx from "clsx";
 import { useState } from "react";
 import { FiMoreVertical } from "react-icons/fi";
 import { DopdownOptions, Dropdown } from "./Dropdown";
 import { Text } from "./Text";
 
-interface CardProps {
+export interface CardProps {
   details: boolean
   actionsDropdown: DopdownOptions[]
+  title: string
 }
 
-export function Card({details, actionsDropdown}: CardProps) {
+export function Card({details, actionsDropdown, title = "Draft"}: CardProps) {
 
   const [isOpen, setIsOpen] = useState<boolean>(false)
 
@@ -18,7 +18,7 @@ export function Card({details, actionsDropdown}: CardProps) {
     <div className="relative w-56 rounded bg-purple-500 p-2">
       <section className="flex justify-between items-center">
         <Text asChild={true} size="sm">
-          <h2 className="text-white-50 break-words w-44 text-left">Task example</h2>
+          <h2 className="text-white-50 break-words w-44 text-left">{title}</h2>
         </Text>
         <FiMoreVertical
           onClick={() => setIsOpen(prev => !prev)}
