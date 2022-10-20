@@ -1,6 +1,6 @@
 import { FiEdit, FiFilter, FiMoreVertical, FiPlus, FiTrash, FiUser } from "react-icons/fi";
 import { Button } from "../components/Button";
-import { DefaultContent } from "../components/defaultContent";
+import { DefaultContent } from "../components/DefaultContent";
 import { Header } from "../components/Header";
 import { Card } from "../components/Card";
 import { Text } from "../components/Text";
@@ -41,7 +41,7 @@ export function Tasks() {
         <section className="mt-10 w-full flex flex-wrap justify-center gap-4">
           {
             tasks.length === 0 ? <DefaultContent message="Nenhuma task encontrada" />
-            : tasks.map((task) => <Card actionsDropdown={actionsMenu} details={true} key={task.id} />)
+            : tasks.map((task) => <Card title="Task example" actionsDropdown={actionsMenu} details={true} key={task.id} />)
           }
         </section>
       </main>
