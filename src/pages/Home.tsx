@@ -3,9 +3,23 @@ import taskImage from '../assets/tasks.svg';
 import { FiLock, FiUser } from "react-icons/fi";
 import { Input } from "../components/Input";
 import { Button } from "../components/Button";
-import { NavLink } from "react-router-dom";
+import { useState } from "react";
+import { validateUser } from "../api/validateUserData";
 
 export function Home() {
+
+  const [nameUser, setNameUser] = useState<string>('')
+  const [password, setPassword] = useState<string>('')
+
+  async function handlesubmit() {
+    try{
+      const user = await validateUser(nameUser, password);
+      console.log(user)
+    } catch(err: any) {
+      console.log(err)
+    }
+  };
+
   return (
     <div className="flex flex-col h-screen">
       <header className="p-9 justify-center flex">
@@ -27,19 +41,15 @@ export function Home() {
                 <FiUser className="text-gray-900" />
                 Nome
               </label>
-              <Input type="text" placeholderName="Digite seu nome" />
+              <Input onchange={setNameUser} type="text" placeholderName="Digite seu nome" />
 
               <label className="flex text-purple-500 mb-1 items-center gap-2">
                 <FiLock className="text-gray-900" />
                 Senha
               </label>
-              <Input type="password" placeholderName="Digite sua senha" />
+              <Input onchange={setPassword} type="password" placeholderName="Digite sua senha" />
 
-              <Button asChild={true} sizeFull={true}>
-                <NavLink to='/tasks-app'>
-                    Acessar
-                </NavLink>
-              </Button>
+              <Button asChild={false} execute={handlesubmit} sizeFull={true} children='Acessar'/>
             </form>
           </div>
         </section>

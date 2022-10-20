@@ -14,6 +14,7 @@ module.exports = {
     colors: {
       gray: {
         100: '#CDABAB',
+        200: '#DEDEDE',
         900: '#2E2020'
       },
       purple: {
@@ -22,6 +23,9 @@ module.exports = {
       },
       white: {
         50: '#FFFFFF'
+      },
+      red: {
+        500: '#E83737',
       }
     },
     extend: {
