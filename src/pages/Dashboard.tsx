@@ -1,4 +1,5 @@
 import { CardTimeHistory } from "../components/CardTimeHistory";
+import { DefaultContent } from "../components/DefaultContent";
 import { Header } from "../components/Header";
 import { Text } from "../components/Text";
 
@@ -17,8 +18,9 @@ export function DashBoard() {
       </Text>
 
       <main className='flex gap-10 scroll-m-3 max-h-96 flex-wrap justify-center'>
-          <CardTimeHistory date={dateDayFormat} hour={hourFormat} title="Horas por dia" />
-          <CardTimeHistory date={dateMonthFormat} hour={hourFormat} title="Horas por mês" />
+          {/* <CardTimeHistory date={dateDayFormat} hour={hourFormat} title="Horas por dia" />
+          <CardTimeHistory date={dateMonthFormat} hour={hourFormat} title="Horas por mês" /> */}
+          <DefaultContent message="Ainda em desenvolvimento" />
       </main>
     </>
   )

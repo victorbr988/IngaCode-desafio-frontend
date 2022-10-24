@@ -1,14 +1,16 @@
+import clsx from "clsx";
 import { FiCalendar } from "react-icons/fi";
 import { Text } from "./Text";
+import { CardDateTimeProps } from "./types";
 
-interface CardDateTimeProps {
-  date: string;
-  hour: string
-}
-
-export function CardDatetime({date, hour}: CardDateTimeProps) {
+export function CardDatetime({date, hour, sizeFull}: CardDateTimeProps) {
   return (
-    <section className="w-full flex bg-white-50 rounded mt-5 justify-between items-center">
+    <section className= {clsx(
+      'flex shadow-md bg-white-50 rounded mt-5 justify-between items-center', {
+        'w-full': sizeFull === undefined,
+        'w-56': sizeFull === false
+      }
+    )}>
       <div className="flex gap-1 items-center px-3">
         <FiCalendar />
         <Text asChild={true} size='xs'>

@@ -1,6 +1,7 @@
 import { Meta, StoryObj } from "@storybook/react";
-import { Button, ButtonProps } from "./Button";
+import { Button } from "./Button";
 import { FiFilter } from 'react-icons/fi'
+import { ButtonProps } from "./types";
 
 export default {
   title: 'Components/Button',

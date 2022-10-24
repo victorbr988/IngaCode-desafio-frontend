@@ -1,10 +1,4 @@
-import { ReactNode } from "react"
-
-export interface InputProps {
-  onchange?(value: string): void
-  placeholderName: string;
-  type: string
-};
+import { InputProps } from "./types";
 
 export function Input({ onchange= () => {}, placeholderName, type }: InputProps) {
   return(

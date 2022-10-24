@@ -1,6 +1,7 @@
 import { Meta, StoryObj} from '@storybook/react'
 import { FiEdit, FiTrash, FiUser } from 'react-icons/fi'
-import { Card, CardProps } from './Card'
+import { CardProps } from './types'
+import { CardTasks } from './CardTasks'
 
 const actionsTask = [
   {id: 1, Icon: FiEdit, name: 'Editar'},
@@ -15,9 +16,8 @@ const actionsProjects = [
 
 export default {
   title: 'Components/Card',
-  component: Card,
+  component: CardTasks,
   args: {
-    details: true,
     title: 'Task example',
     actionsDropdown: actionsTask
   }
@@ -27,7 +27,6 @@ export const Default: StoryObj<CardProps> = {}
 
 export const ProjectCard: StoryObj<CardProps> = {
   args: {
-    details: false,
     title: 'Project example',
     actionsDropdown: actionsProjects
   }

@@ -1,11 +1,13 @@
-import { useState } from 'react'
 import './styles/global.css'
 import { Pagination } from './routes/Pagination'
+import { ContextApp } from './context/ContextConsumer'
 
 function App() {
   return (
     <div className='min-h-screen'>
-      <Pagination />
+      <ContextApp>
+        <Pagination />
+      </ContextApp>
     </div>
   )
 }

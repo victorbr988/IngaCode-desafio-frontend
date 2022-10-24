@@ -1,5 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { Text, TextProps } from "./Text";
+import { Text } from "./Text";
+import { TextProps } from './types';
 
 export default {
   title: 'Components/Text',

@@ -1,12 +1,7 @@
 import { FiCalendar } from "react-icons/fi";
 import { CardDatetime } from "./CardDatetime";
 import { Text } from "./Text";
-
-interface CardTimeProps {
-  title: string;
-  date: string;
-  hour: string;
-}
+import { CardTimeProps } from "./types";
 
 export function CardTimeHistory({ title, date, hour }: CardTimeProps) {
   return (
@@ -16,10 +11,6 @@ export function CardTimeHistory({ title, date, hour }: CardTimeProps) {
           <h2 className="text-center text-white-50">{ title }</h2>
         </Text>
 
-        <CardDatetime date={date} hour={hour} />
-        <CardDatetime date={date} hour={hour} />
-        <CardDatetime date={date} hour={hour} />
-        <CardDatetime date={date} hour={hour} />
         <CardDatetime date={date} hour={hour} />
       </main>
     </>
