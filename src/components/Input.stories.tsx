@@ -11,7 +11,7 @@ export default {
   },
   argTypes: {
     type: {
-      options: ['text', 'password'],
+      options: ['text', 'password', 'datetime-local'],
       control: {
         type: 'inline-radio'
       }
@@ -28,7 +28,22 @@ export const InputText: StoryObj<InputProps> = {
   },
   argTypes: {
     type: {
-      options: ['text', 'password'],
+      options: ['text', 'password', 'datetime-local'],
+      control: {
+        type: 'inline-radio'
+      }
+    }
+  }
+};
+
+export const InputDate: StoryObj<InputProps> = {
+  args: {
+    placeholderName: 'Digite seu nome',
+    type: 'datetime-local',
+  },
+  argTypes: {
+    type: {
+      options: ['text', 'password', 'datetime-local'],
       control: {
         type: 'inline-radio'
       }

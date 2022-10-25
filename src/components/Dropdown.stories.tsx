@@ -27,10 +27,21 @@ export default {
           className="cursor-pointer text-sm text-white-50 top-3 right-3"
         />
       </div>
-    )
+    ),
+    id: '17yBCBguubshjsjidbyv768s9hduisdhjvydbvuyv7gsio'
   },
   argTypes: {
     children: {
+      table: {
+        disable: true
+      }
+    },
+    actions: {
+      table: {
+        disable: true
+      }
+    },
+    id: {
       table: {
         disable: true
       }

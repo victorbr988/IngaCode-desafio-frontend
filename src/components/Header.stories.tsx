@@ -8,9 +8,25 @@ export default {
   decorators: [withRouter],
   parameters: {
     reactRouter: {
-      routePath: '/dashboard',
+      routePath: '/tasks',
     }
   }
 } as Meta;
 
 export const Default: StoryObj = {};
+
+export const Dashboard: StoryObj = {
+  parameters: {
+    reactRouter: {
+      routePath: '/dashboard',
+    }
+  }
+};
+
+export const Projects: StoryObj = {
+  parameters: {
+    reactRouter: {
+      routePath: '/projects',
+    }
+  }
+};

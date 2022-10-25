@@ -15,6 +15,11 @@ export default {
       control: {
         type: 'inline-radio'
       } 
+    },
+    asChild: {
+      table: {
+        disable: true
+      }
     }
   }
 } as Meta<TextProps>;
@@ -25,6 +30,13 @@ export const Large: StoryObj<TextProps> = {
   args: {
     children: 'Hello world',
     size: 'lg'
+  },
+  argTypes: {
+    asChild: {
+      table: {
+        disable: true
+      }
+    }
   }
 };
 
@@ -32,18 +44,9 @@ export const Small: StoryObj<TextProps> = {
   args: {
     children: 'Hello world',
     size: 'sm'
-  }
-};
-
-export const CustomComponent: StoryObj<TextProps> = {
-  args: {
-    asChild: true,
-    children: (
-      <p>Hello World</p>
-    )
   },
   argTypes: {
-    children: {
+    asChild: {
       table: {
         disable: true
       }
@@ -55,6 +58,13 @@ export const ExtraSmall: StoryObj<TextProps> = {
   args: {
     children: 'Hello world',
     size: 'xs'
+  },
+  argTypes: {
+    asChild: {
+      table: {
+        disable: true
+      }
+    }
   }
 };
 
