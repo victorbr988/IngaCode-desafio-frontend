@@ -20,7 +20,6 @@ export function CardTasks({actionsDropdown, title = "Draft", data}: CardProps) {
   const [detailsOpen, setOpenDetails] = useState<boolean>(false)
   const [startDate, setStartDate] = useState<string>('')
   const [endDate, setEndDate] = useState<string>('')
-  const [_deleteTimer, setDeleteTimer] = useState<boolean>(false)
   const [openStartTimer, setIsOpenStartTimer] = useState<boolean>(false)
   const [colaborators, setColaborators] = useState<ColaboratorProps[]>([])
   const dateFormatCreate = new Date(data!.createdAt);
